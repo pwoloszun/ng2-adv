@@ -1,0 +1,25 @@
+<div *ngIf="items">
+  <table class="table table-striped table-hover">
+    <thead class="thead-default">
+    <tr>
+      <td *ngFor="let meta of metaData">
+        <a>{{meta.text}}</a>
+      </td>
+    </tr>
+    </thead>
+    <tbody class="items-container">
+    <tr *ngFor="let item of items"
+        [ngClass]="{'info': selectedItem == item}"
+        (click)="onRowClick(item)">
+      <td *ngFor="let meta of metaData" [ngSwitch]="meta.type">
+        <span *ngSwitchCase="'link'">
+          <a [routerLink]="getLinkFor(item, meta.link)" [class]="meta.cssClass">{{meta.label}}</a>
+        </span>
+        <span *ngSwitchDefault>
+          {{item[meta.value]}}
+        </span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

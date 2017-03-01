@@ -1,0 +1,18 @@
+<div>
+  <main-menu [links]="mainMenuLinks"></main-menu>
+  <status-bar></status-bar>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer navbar-fixed-bottom">
+    <div class="text-center">
+      @Copyright Piotr Woloszun <a [href]="url" class="text-center">{{linkText}}</a>
+    </div>
+  </div>
+</div>

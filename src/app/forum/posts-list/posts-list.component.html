@@ -1,0 +1,23 @@
+<h3>
+  Posts
+</h3>
+
+<ol>
+  <li *ngFor="let post of posts">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          {{post.title}}
+        </h3>
+      </div>
+      <div class="panel-body">
+        <div>
+          {{post.content}}
+        </div>
+        <comments-list [postId]="post.id"></comments-list>
+      </div>
+    </div>
+  </li>
+</ol>
+
+

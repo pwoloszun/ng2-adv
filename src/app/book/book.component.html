@@ -1,0 +1,19 @@
+<h3>
+  Book Main
+</h3>
+
+<div>
+  <button (click)="oldLoad()">old Load</button>
+</div>
+
+<hr/>
+
+<div>
+  <button (click)="load()">Load</button>
+</div>
+
+<div *ngIf="isLoading$ | async" class="alert alert-info">
+  Loading Book...
+</div>
+
+<book-details [book]="book$ | async"></book-details>

@@ -1,0 +1,13 @@
+<h3>
+  Comments
+</h3>
+
+<ul class="list-group">
+  <li *ngIf="isLoading$ | async" class="list-group-item">
+    Loading...
+  </li>
+  <li *ngFor="let comment of comments$ | async" class="list-group-item">
+    {{comment.text}}
+  </li>
+</ul>
+

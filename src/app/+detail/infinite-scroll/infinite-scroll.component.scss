@@ -1,0 +1,18 @@
+.infinite-scroll {
+  height: 500px;
+  width: 700px;
+  border: 1px solid #f5ad7c;
+  overflow: scroll;
+  padding: 0 0 0 40px;
+
+  li {
+    padding: 12px;
+    line-height: 1.5;
+    &:nth-child(odd) {
+      background: #fff;
+    }
+    &:nth-child(even) {
+      background: rgba(0, 0, 0, .1);
+    }
+  }
+}

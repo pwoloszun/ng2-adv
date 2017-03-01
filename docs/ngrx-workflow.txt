@@ -1,0 +1,12 @@
+Sync:
+1. introduce data type/interface [counter.ts]
+2. define possible Action and ActionType [counter.actions.ts]
+3. define slice state shape & reducer [counter.reducer.ts]
+4. register reducer in app.reducer.ts
+5. dispatch an action from component using store.dispatch(myAction) [counter.component.ts]
+6. observe store using store.select(...) [counter.component.ts]
+
+
+Async:
+7. add ngrx/effects [async-counter.effects.ts]
+8. import EffectsModule.run(AsyncCounterEffects) into NgModule [app.module.ts]
